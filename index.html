@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtuelles Haustier Premium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐾 Virtuelles Haustier Premium 🐾</h1>
+
+    <div class="pet-card">
+      <select id="petSelect">
+        <option value="pet1">Haustier 1</option>
+        <option value="pet2">Haustier 2</option>
+      </select>
+      <input id="petNameInput" type="text" placeholder="Name ändern" maxlength="12">
+      <h2 id="petName">Fluffy</h2>
+      <p id="petMood">Stimmung: 😊 Glücklich</p>
+      <p id="petLevel">Level: 1</p>
+
+      <div class="buttons">
+        <button onclick="feedPet()">Füttern 🍎</button>
+        <button onclick="playPet()">Spielen 🎾</button>
+        <button onclick="sleepPet()">Schlafen 💤</button>
+        <button onclick="miniGame()">Mini-Spiel 🎮</button>
+      </div>
+
+      <div class="xp-container">
+        <div id="xpBar"></div>
+      </div>
+      <p id="xpText">XP: 0</p>
+
+      <div id="dailyMission">
+        <p>Tägliche Mission: Spiele 2x</p>
+        <button onclick="completeMission()">Mission abschließen ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="feedSound" src="sounds/feed.mp3"></audio>
+  <audio id="playSound" src="sounds/play.mp3"></audio>
+  <audio id="levelUpSound" src="sounds/levelup.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
